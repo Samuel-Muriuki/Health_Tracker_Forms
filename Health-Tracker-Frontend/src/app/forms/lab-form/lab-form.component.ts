@@ -9,8 +9,12 @@ import { LabFormService } from 'src/app/services/lab-form.service';
 })
 export class LabFormComponent implements OnInit {
   labForm: LabForm = {
-    data_ptr: '',
+    pk: '',
     sample_number: '',
+    age: '',
+    gender: '',
+    signs_and_symptoms: '',
+    patient_type: '',
     condition: '',
     test: '',
     disease_found: '',
@@ -24,8 +28,12 @@ export class LabFormComponent implements OnInit {
   
   saveLabForm(): void {
     const data = {
-      data_ptr: this.labForm.data_ptr,
+      // data_ptr: this.labForm.pk,
       sample_number: this.labForm.sample_number,
+      age: this.labForm.age,
+      gender: this.labForm.gender,
+      signs_and_symptoms: this.labForm.signs_and_symptoms,
+      patient_type: this.labForm.patient_type,
       condition: this.labForm.condition,
       test: this.labForm.test,
       disease_found: this.labForm.disease_found,
@@ -44,8 +52,12 @@ export class LabFormComponent implements OnInit {
   newLabForm(): void {
     this.submitted = false;
     this.labForm = {
-      data_ptr: '',
+      pk: '',
       sample_number: '',
+      age: '',
+      gender: '',
+      signs_and_symptoms: '',
+      patient_type: '',
       condition: '',
       test: '',
       disease_found: '',

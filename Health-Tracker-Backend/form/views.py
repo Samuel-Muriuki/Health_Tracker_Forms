@@ -48,15 +48,15 @@ def data_detail(request, pk):
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-@api_view(['GET'])
-def data_list_published(request):
-    """
-    List all code snippets, or create a new snippet.
-    """
-    if request.method == 'GET':
-        snippets = Data.objects.filter(published=True)
-        serializer = DataSerializer(snippets, many=True)
-        return Response(serializer.data)
+# @api_view(['GET'])
+# def data_list_published(request):
+#     """
+#     List all code snippets, or create a new snippet.
+#     """
+#     if request.method == 'GET':
+#         snippets = Data.objects.filter(published=True)
+#         serializer = DataSerializer(snippets, many=True)
+#         return Response(serializer.data)
 
 @api_view(['GET', 'POST', 'DELETE'])
 def lab_list(request):
@@ -100,12 +100,12 @@ def lab_detail(request, pk):
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-@api_view(['GET'])
-def lab_list_published(request):
-    """
-    List all code snippets, or create a new snippet.
-    """
-    if request.method == 'GET':
-        snippets = Lab.objects.filter(published=True)
-        serializer = LabSerializer(snippets, many=True)
-        return Response(serializer.data)
+# @api_view(['GET'])
+# def lab_list_published(request):
+#     """
+#     List all code snippets, or create a new snippet.
+#     """
+#     if request.method == 'GET':
+#         snippets = Lab.objects.filter(published=True)
+#         serializer = LabSerializer(snippets, many=True)
+#         return Response(serializer.data)

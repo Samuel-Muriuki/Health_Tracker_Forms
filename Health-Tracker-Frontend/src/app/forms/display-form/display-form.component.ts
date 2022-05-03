@@ -15,6 +15,7 @@ export class DisplayFormComponent implements OnInit {
 
   constructor(private dataFormService: DataFormService) { }
 
+
   ngOnInit(): void {
     this.retrieveDataForm();
   }

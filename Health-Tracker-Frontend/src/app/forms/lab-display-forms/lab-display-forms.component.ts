@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { LabForm } from 'src/app/models/lab-form.model'; 
 import { LabFormService } from 'src/app/services/lab-form.service';
 
@@ -13,7 +13,7 @@ export class LabDisplayFormsComponent implements OnInit {
   currentIndex = -1;
   id = '';
   constructor(private labFormService: LabFormService) { }
-
+  
   ngOnInit(): void {
     this.retrieveLabForm();
   }
