@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { DataFormComponent } from './forms/data-form/data-form.component';
 import { DisplayFormComponent } from './forms/display-form/display-form.component';
 import { LabFormComponent } from './forms/lab-form/lab-form.component';
+import { LabDisplayFormsComponent } from './forms/lab-display-forms/lab-display-forms.component';
 import { FormsComponent } from './forms/forms.component';
+import { UpdateFormComponent } from './forms/update-form/update-form.component';
 // import { LoginDriverComponent } from './login/login-driver/login-driver.component';
 // import { LoginKemriAdminComponent } from './login/login-kemri-admin/login-kemri-admin.component';
 // import { LoginMoringaAdminComponent } from './login/login-moringa-admin/login-moringa-admin.component';
@@ -16,7 +18,14 @@ import { FormsComponent } from './forms/forms.component';
 // import { FormsModule } from '@angular/forms';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: 'data', pathMatch: 'full' },
+  { path: 'data', component: DisplayFormComponent },
+  { path: 'data/:id', component: DisplayFormComponent },
+  { path: 'add', component: DataFormComponent },
+  { path: 'lab', component: LabDisplayFormsComponent },
+  { path: 'update/:id', component:UpdateFormComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

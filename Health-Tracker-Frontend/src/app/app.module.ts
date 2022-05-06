@@ -20,6 +20,7 @@ import { LoginKemriAdminComponent } from './login/login-kemri-admin/login-kemri-
 import { LoginDriverComponent } from './login/login-driver/login-driver.component';
 import { NavbarComponent } from './navigation-bar/navbar/navbar.component';
 import { LabDisplayFormsComponent } from './forms/lab-display-forms/lab-display-forms.component';
+import { UpdateFormComponent } from './forms/update-form/update-form.component';
 
 @NgModule({
   declarations: [    
@@ -36,7 +37,8 @@ import { LabDisplayFormsComponent } from './forms/lab-display-forms/lab-display-
     LoginKemriAdminComponent,
     LoginDriverComponent,
     NavbarComponent,
-    LabDisplayFormsComponent
+    LabDisplayFormsComponent,
+    UpdateFormComponent
   ],
   imports: [
     FormsModule,

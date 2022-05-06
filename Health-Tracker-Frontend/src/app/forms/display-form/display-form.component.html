@@ -13,7 +13,11 @@
                 <th scope="col">Age</th>
                 <th scope="col">Gender</th>
                 <th scope="col">Signs and Symptoms</th>
+                <th scope="col">Test</th>
+                <th scope="col">Condition</th>             
+                <th scope="col">Disease Found</th>
                 <th scope="col">Type of Patient</th>
+                <th scope="col">Edit</th>
             </tr>
             </thead>
             <tbody class="" *ngFor="let dataForm of dataForm; let i = index" [class.active]="i == currentIndex" (click)="setActiveDataForm(dataForm, i)">
@@ -24,7 +28,13 @@
                     <td>{{ dataForm.age }}</td>
                     <td>{{ dataForm.gender }}</td>
                     <td>{{ dataForm.signs_and_symptoms }}</td>
+                    <td>{{ dataForm.test }}</td>
+                    <td>{{ dataForm.condition }}</td>
+                    <td>{{ dataForm.disease_found }}</td>
                     <td>{{ dataForm.patient_type }}</td>
+                    <td>
+                        <a routerLink="/update/{{ dataForm.id }}"><i class="fa fa-edit"></i></a>
+                    </td>
                 </tr>
             </tbody>
         </table>

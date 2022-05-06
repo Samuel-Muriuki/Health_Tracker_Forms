@@ -13,8 +13,8 @@ export class DataFormService {
   getAll(): Observable<DataForm[]> {
     return this.http.get<DataForm[]>(API_URL);
   }
-  get(id: string): Observable<DataForm> {
-    return this.http.get<DataForm>(`${API_URL}/${id}`);
+  getById(id: string): Observable<DataForm> {
+    return this.http.get<DataForm>(`${API_URL}${id}`);
   }
   create(dataForm: DataForm): Observable<DataForm> {
     return this.http.post<DataForm>(API_URL, dataForm);

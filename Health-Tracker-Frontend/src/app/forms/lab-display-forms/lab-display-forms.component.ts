@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { LabForm } from 'src/app/models/lab-form.model'; 
-import { LabFormService } from 'src/app/services/lab-form.service';
+import { DataForm } from 'src/app/models/data-form.model'; 
+import { DataFormService } from 'src/app/services/data-form.service'; 
 
 @Component({
   selector: 'app-lab-display-forms',
@@ -8,21 +8,21 @@ import { LabFormService } from 'src/app/services/lab-form.service';
   styleUrls: ['./lab-display-forms.component.css']
 })
 export class LabDisplayFormsComponent implements OnInit {
-  labForm?: LabForm[];
-  currentLabForm: LabForm = {};
+  dataForm?: DataForm[];
+  currentDataForm: DataForm = {};
   currentIndex = -1;
   id = '';
-  constructor(private labFormService: LabFormService) { }
+  constructor(private dataFormService: DataFormService) { }
   
   ngOnInit(): void {
-    this.retrieveLabForm();
+    this.retrieveDataForm();
   }
-  retrieveLabForm(): void {
-    this.labFormService.getAll()
+  retrieveDataForm(): void {
+    this.dataFormService.getAll()
     .subscribe({
-      next: (lab) => {
-        this.labForm = lab;
-        console.log(lab);
+      next: (data) => {
+        this.dataForm = data;
+        console.log(data);
       },
       error: (err) => {
         console.log(err);
@@ -30,12 +30,12 @@ export class LabDisplayFormsComponent implements OnInit {
     })
   }
   refreshList(): void {
-    this.retrieveLabForm();
-    this.currentLabForm = {};
+    this.retrieveDataForm();
+    this.currentDataForm = {};
     this.currentIndex = -1;
   }
-  setActiveLabForm(labForm: LabForm, index: number): void {
-    this.currentLabForm = labForm;
+  setActiveDataForm(dataForm: DataForm, index: number): void {
+    this.currentDataForm = dataForm;
     this.currentIndex = index;
   }
 }
