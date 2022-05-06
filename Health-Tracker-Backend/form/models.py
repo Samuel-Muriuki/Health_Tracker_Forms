@@ -9,7 +9,7 @@ class Data(models.Model):
     gender = models.CharField(max_length=7, default='')
     signs_and_symptoms = models.CharField(max_length=255, default='')
     patient_type = models.CharField(max_length=10, default='')
-    condition = models.CharField(max_length=255, blank=False, default='')
+    # condition = models.CharField(max_length=255, blank=False, default='')
     test = models.CharField(max_length=255, blank=False, default='')
     disease_found = models.CharField(max_length=255, blank=False, default='')
     published = models.BooleanField(default=False)
