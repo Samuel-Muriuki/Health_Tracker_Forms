@@ -1,0 +1,18 @@
+
+#home {
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+background-image: url(https://imageio.forbes.com/blogs-images/bernardmarr/files/2018/07/AdobeStock_157266517-1200x640.jpeg?format=jpg&width=1200);
+background-repeat: no-repeat;
+background-size: 1400px 800px;
+margin-top: -100px;
+}
+
+#home .content p {
+font-size: 250%;
+font-family: "lemonada", sans-serif;
+font-weight: bolder;
+text-shadow: 0.1rem 0.1rem 0.3rem #333;
+color: white;
+text-align: center;
+}

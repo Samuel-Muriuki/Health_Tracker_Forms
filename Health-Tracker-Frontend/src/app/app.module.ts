@@ -21,6 +21,8 @@ import { LoginDriverComponent } from './login/login-driver/login-driver.componen
 import { NavbarComponent } from './navigation-bar/navbar/navbar.component';
 import { LabDisplayFormsComponent } from './forms/lab-display-forms/lab-display-forms.component';
 import { UpdateFormComponent } from './forms/update-form/update-form.component';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [    
@@ -38,7 +40,9 @@ import { UpdateFormComponent } from './forms/update-form/update-form.component';
     LoginDriverComponent,
     NavbarComponent,
     LabDisplayFormsComponent,
-    UpdateFormComponent
+    UpdateFormComponent,
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     FormsModule,
