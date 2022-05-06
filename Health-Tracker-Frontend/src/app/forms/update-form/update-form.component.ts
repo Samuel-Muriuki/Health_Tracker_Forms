@@ -17,7 +17,7 @@ export class UpdateFormComponent implements OnInit {
     gender: '',
     signs_and_symptoms: '',
     patient_type: '',
-    condition: '',
+    // condition: '',
     test: '',
     disease_found: '',
     
@@ -36,7 +36,7 @@ export class UpdateFormComponent implements OnInit {
       this.dataForm.age = result.age;
       this.dataForm.gender = result.gender;
       this.dataForm.signs_and_symptoms = result.signs_and_symptoms;
-      this.dataForm.condition = result.condition;
+      // this.dataForm.condition = result.condition;
       this.dataForm.test = result.test;
       this.dataForm.disease_found = result.disease_found;
       this.dataForm.patient_type = result.patient_type;

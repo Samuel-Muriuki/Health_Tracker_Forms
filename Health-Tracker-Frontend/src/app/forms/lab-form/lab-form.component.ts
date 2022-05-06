@@ -15,7 +15,7 @@ export class LabFormComponent implements OnInit {
     gender: '',
     signs_and_symptoms: '',
     patient_type: '',
-    condition: '',
+    // condition: '',
     test: '',
     disease_found: '',
   }
@@ -34,7 +34,7 @@ export class LabFormComponent implements OnInit {
       gender: this.labForm.gender,
       signs_and_symptoms: this.labForm.signs_and_symptoms,
       patient_type: this.labForm.patient_type,
-      condition: this.labForm.condition,
+      // condition: this.labForm.condition,
       test: this.labForm.test,
       disease_found: this.labForm.disease_found,
     }
@@ -58,7 +58,7 @@ export class LabFormComponent implements OnInit {
       gender: '',
       signs_and_symptoms: '',
       patient_type: '',
-      condition: '',
+      // condition: '',
       test: '',
       disease_found: '',
     }

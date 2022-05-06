@@ -1,4 +1,4 @@
-<div class="">
+<div class="card">
     <div class="submit-form">
     <form *ngIf="!submitted">
         <div class="form-group">
@@ -21,10 +21,10 @@
             <label for="signs_and_symptoms">Signs and Symptoms: </label>
             <input type="text" class="form-control" id="signs_and_symptoms" placeholder="Signs and Symptoms" [(ngModel)]="dataForm.signs_and_symptoms" name="signs_and_symptoms">
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="condition">Condition: </label>
             <input type="text" class="form-control" id="condition" placeholder="Condition" [(ngModel)]="dataForm.condition" name="condition">
-        </div>
+        </div> -->
         <div class="form-group">
             <label for="test">Test: </label>
             <input type="text" class="form-control" id="test" placeholder="Test" [(ngModel)]="dataForm.test" name="test">
@@ -40,7 +40,7 @@
         <button (click) = "saveDataForm()" class="btn btn-success">Submit</button>
     </form>
     <div *ngIf = "submitted">
-        <h4>Data Form was submitted successfully</h4>
+        <h4>Patient was added successfully</h4>
         <button class="btn btn-success" (click)="newDataForm()">Add</button>
     </div>
 </div>

@@ -16,7 +16,7 @@ export class DataFormComponent implements OnInit {
     gender: '',
     signs_and_symptoms: '',
     patient_type: '',
-    condition: '',
+    // condition: '',
     test: '',
     disease_found: '',
     
@@ -37,7 +37,7 @@ export class DataFormComponent implements OnInit {
       gender: this.dataForm.gender,
       signs_and_symptoms: this.dataForm.signs_and_symptoms,
       patient_type: this.dataForm.patient_type,
-      condition: this.dataForm.condition,
+      // condition: this.dataForm.condition,
       test: this.dataForm.test,
       disease_found: this.dataForm.disease_found,
     };
@@ -62,7 +62,7 @@ export class DataFormComponent implements OnInit {
       gender: '',
       signs_and_symptoms: '',
       patient_type: '',
-      condition: '',
+      // condition: '',
       test: '',
       disease_found: '',
     }
