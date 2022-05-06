@@ -63,5 +63,16 @@ def update(request, pk):
     """
     
     """
-    snippets = Data.objects.get(pk=pk)
-    
+    if request.method == 'PUT':
+        snippet = Data.objects.get(pk=pk)
+        serializer = DataSerializer(snippet, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    # snippets = Data.objects.get(pk=pk)
+    # serializer = DataSerializer(snippet, data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data)
+    # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

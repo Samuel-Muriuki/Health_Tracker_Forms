@@ -6,3 +6,7 @@ class DataSerializer(serializers.ModelSerializer):
         model = Data
         fields = '__all__'
         
+class UpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Data
+        fields = '__all__'

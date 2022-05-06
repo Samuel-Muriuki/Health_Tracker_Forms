@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataForm } from 'src/app/models/data-form.model';
 import { DataFormService } from 'src/app/services/data-form.service';
-import { ActivatedRoute } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-form',
@@ -23,68 +22,37 @@ export class UpdateFormComponent implements OnInit {
     disease_found: '',
     
   }
-  // dataForm = new FormGroup ({
-  //   // id: '',
-  //   first_name: new FormControl(''),
-  //   last_name: new FormControl(''),
-  //   age: new FormControl(''),
-  //   gender: new FormControl(''),
-  //   signs_and_symptoms: new FormControl(''),
-  //   patient_type: new FormControl(''),
-  //   condition: new FormControl(''),
-  //   test: new FormControl(''),
-  //   disease_found: new FormControl(''),
-  // });
   submitted = false;
 
-  constructor(private dataFormService: DataFormService, private router: ActivatedRoute) { }
+  constructor(private dataFormService: DataFormService, private router: ActivatedRoute, private route: Router) { }
 
   ngOnInit(): void {
-    // console.log(this.router.snapshot.params['id']);
     this.dataFormService.getById(this.router.snapshot.params['id']).subscribe((result: any)=>{
-      console.log(result)
+      // console.log(result)
 
-      // this.dataForm = new 
+      this.dataForm.id = result.id;
+      this.dataForm.first_name = result.first_name;
+      this.dataForm.last_name = result.last_name;
+      this.dataForm.age = result.age;
+      this.dataForm.gender = result.gender;
+      this.dataForm.signs_and_symptoms = result.signs_and_symptoms;
+      this.dataForm.condition = result.condition;
+      this.dataForm.test = result.test;
+      this.dataForm.disease_found = result.disease_found;
+      this.dataForm.patient_type = result.patient_type;
     });
   };
 
   updateDataForm(): void {
-    const data = {
-      id: this.dataForm.id,
-      first_name: this.dataForm.first_name,
-      last_name: this.dataForm.last_name,
-      age: this.dataForm.age,
-      gender: this.dataForm.gender,
-      signs_and_symptoms: this.dataForm.signs_and_symptoms,
-      patient_type: this.dataForm.patient_type,
-      condition: this.dataForm.condition,
-      test: this.dataForm.test,
-      disease_found: this.dataForm.disease_found,
-    };
-    this.dataFormService.create(data)
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-          this.submitted = true;
-        },
-        error: (err) => {
-          console.log(err);
-        }
-      })
+    // console.log(this.dataForm);
+    this.dataFormService.update(this.router.snapshot.params['id'], this.dataForm).subscribe(()=>{});
+    this.goToData();
+  };
+  goToData($myParam: string = ''): void {
+    const navigationDetails: string[] = ['/data'];
+    if($myParam.length) {
+      navigationDetails.push($myParam);
+    }
+    this.route.navigate(navigationDetails);
   }
-  // newDataForm(): void {
-  //   this.submitted = false;
-  //   this.dataForm = {
-  //     // id: '',
-  //     first_name: '',
-  //     last_name: '',
-  //     age: '',
-  //     gender: '',
-  //     signs_and_symptoms: '',
-  //     patient_type: '',
-  //     condition: '',
-  //     test: '',
-  //     disease_found: '',
-  //   }
-  // }
-}
+};

@@ -41,11 +41,11 @@ export class LabFormComponent implements OnInit {
     this.labFormService.create(data)
       .subscribe({
         next: (response) => {
-          console.log(response);
+          // console.log(response);
           this.submitted = true;
         },
         error: (err) => {
-          console.log(err);
+          // console.log(err);
         }
       })
   }

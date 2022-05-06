@@ -44,11 +44,11 @@ export class DataFormComponent implements OnInit {
     this.dataFormService.create(data)
       .subscribe({
         next: (res) => {
-          console.log(res);
+          // console.log(res);
           this.submitted = true;
         },
         error: (err) => {
-          console.log(err);
+          // console.log(err);
         }
       })
   }

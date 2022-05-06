@@ -22,10 +22,10 @@ export class LabDisplayFormsComponent implements OnInit {
     .subscribe({
       next: (data) => {
         this.dataForm = data;
-        console.log(data);
+        // console.log(data);
       },
       error: (err) => {
-        console.log(err);
+        // console.log(err);
       } 
     })
   }
