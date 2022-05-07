@@ -16,29 +16,31 @@ import { UpdateFormComponent } from './forms/update-form/update-form.component';
 // import { FormsModule } from '@angular/forms';
 
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { LoginDriverComponent } from './login/login-driver/login-driver.component';
 import { LoginMoringaComponent } from './login/login-moringa/login-moringa.component';
 import { LoginMoringaAdminComponent } from './login/login-moringa-admin/login-moringa-admin.component';
 import { LoginKemriAdminComponent } from './login/login-kemri-admin/login-kemri-admin.component';
 import { LoginKemriComponent } from './login/login-kemri/login-kemri.component';
+import { KemriComponent } from './Admin-Dashboard/kemri/kemri.component';
+import { MoringaComponent } from './Admin-Dashboard/moringa/moringa.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'data', pathMatch: 'full' },
+  {path:"",component:HomeComponent},
+  {path: "about", component: AboutComponent},
+  // { path: '', redirectTo: 'data', pathMatch: 'full' },
   { path: 'data', component: DisplayFormComponent },
   { path: 'data/:id', component: DisplayFormComponent },
   { path: 'add', component: DataFormComponent },
   { path: 'lab', component: LabDisplayFormsComponent },
   { path: 'update/:id', component:UpdateFormComponent },
-
-  {path:"home",component:HomeComponent},
-  {path:"about",component:AboutComponent},
   {path:"driver",component:LoginDriverComponent},
   {path:"moringaAdmin",component:LoginMoringaAdminComponent},
   {path:"kemriAdmin",component:LoginKemriAdminComponent},
-  {path:"moringaStuff",component:LoginMoringaComponent},
-  {path:"kemriStuff",component:LoginKemriComponent}
-
+  {path:"moringaStaff",component:LoginMoringaComponent},
+  {path:"kemriStaff",component:LoginKemriComponent},
+  {path:"kemriAdmin/kemri",component:KemriComponent},
+  {path:"moringaAdmin/moringa",component:MoringaComponent},
 ];
 
 @NgModule({

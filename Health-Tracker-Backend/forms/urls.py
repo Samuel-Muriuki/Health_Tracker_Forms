@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+admin.site.site_header = "MORINGA Admin"
+admin.site.site_title = "MORINGA Admin Portal"
+admin.site.index_title = "Welcome to MORINGA Researcher Portal"
+admin.site.site_url = "http://localhost:8081/data"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('form.urls')),

@@ -23,6 +23,8 @@ import { LabDisplayFormsComponent } from './forms/lab-display-forms/lab-display-
 import { UpdateFormComponent } from './forms/update-form/update-form.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { KemriComponent } from './Admin-Dashboard/kemri/kemri.component';
+import { MoringaComponent } from './Admin-Dashboard/moringa/moringa.component';
 
 @NgModule({
   declarations: [    
@@ -42,7 +44,9 @@ import { HomeComponent } from './home/home.component';
     LabDisplayFormsComponent,
     UpdateFormComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    KemriComponent,
+    MoringaComponent
   ],
   imports: [
     FormsModule,

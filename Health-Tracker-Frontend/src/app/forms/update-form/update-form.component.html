@@ -37,12 +37,12 @@
                 <label for="patient_type">Type of Patient: </label>
                 <input type="text" class="form-control" id="patient_type" placeholder="Type of Patient" [(ngModel)]="dataForm.patient_type" name="patient_type">
             </div>
-            <button (click) = "updateDataForm()" class="btn btn-success">Update</button>
+            <button (click) = "updateDataForm()" class="btn btn-info">Update</button>
             
         </form>
     </div>
 </div>
 <div *ngIf = "submitted">
     <h4>Data Form was submitted successfully</h4>
-    <button class="btn" (click)="goToData()">Check votes</button>
+    <button class="btn btn-info" (click)="goToData()">Add</button>
 </div>
