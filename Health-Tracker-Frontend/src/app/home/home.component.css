@@ -13,6 +13,7 @@ height: 100vh;
 
 .content {
 margin-top: -25%;
+margin-left: -200px;
 }
 .content p {
 font-size: 250%;
@@ -28,7 +29,6 @@ text-align: center;
 font-size: 30px;
 font-weight: 700;
 height: 35rem;
-background-color: rgb(230, 218, 195);
 }
 
 #about {

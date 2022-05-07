@@ -49,7 +49,7 @@ export class UpdateFormComponent implements OnInit {
     this.goToData();
   };
   goToData($myParam: string = ''): void {
-    const navigationDetails: string[] = ['/data'];
+    const navigationDetails: string[] = ['moringaStaff/data'];
     if($myParam.length) {
       navigationDetails.push($myParam);
     }

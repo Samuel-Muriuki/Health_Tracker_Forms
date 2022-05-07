@@ -29,7 +29,7 @@ const routes: Routes = [
   {path:"",component:HomeComponent},
   {path: "about", component: AboutComponent},
   // { path: '', redirectTo: 'data', pathMatch: 'full' },
-  { path: 'data', component: DisplayFormComponent },
+  { path: 'moringaStaff/data', component: DisplayFormComponent },
   { path: 'data/:id', component: DisplayFormComponent },
   { path: 'add', component: DataFormComponent },
   { path: 'lab', component: LabDisplayFormsComponent },
