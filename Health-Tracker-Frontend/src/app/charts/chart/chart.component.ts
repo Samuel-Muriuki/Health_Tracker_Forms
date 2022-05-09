@@ -8,7 +8,7 @@ import { ChartData, ChartOptions } from 'chart.js';
 })
 export class ChartComponent {
 
-  salesData: ChartData<'line'> = {
+  diseaseData: ChartData<'line'> = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
     datasets: [
       { label: 'Anaemia', data: [1000, 1200, 1050, 2000, 500], tension: 0.5 },
