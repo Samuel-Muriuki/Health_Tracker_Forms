@@ -25,7 +25,8 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { KemriComponent } from './Admin-Dashboard/kemri/kemri.component';
 import { MoringaComponent } from './Admin-Dashboard/moringa/moringa.component';
-
+import { ChartComponent } from './charts/chart/chart.component';
+import { NgChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [    
     AppComponent,
@@ -46,14 +47,16 @@ import { MoringaComponent } from './Admin-Dashboard/moringa/moringa.component';
     AboutComponent,
     HomeComponent,
     KemriComponent,
-    MoringaComponent
+    MoringaComponent,
+    ChartComponent
   ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
