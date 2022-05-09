@@ -24,6 +24,7 @@ import { LoginKemriComponent } from './login/login-kemri/login-kemri.component';
 import { KemriComponent } from './Admin-Dashboard/kemri/kemri.component';
 import { MoringaComponent } from './Admin-Dashboard/moringa/moringa.component';
 import { AboutComponent } from './about/about.component';
+import { ChatComponent } from './chat-box/chat/chat.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path:"kemriStaff",component:LoginKemriComponent},
   {path:"kemriAdmin/kemri",component:KemriComponent},
   {path:"moringaAdmin/moringa",component:MoringaComponent},
+  {path:"chat",component:ChatComponent},
 ];
 
 @NgModule({
