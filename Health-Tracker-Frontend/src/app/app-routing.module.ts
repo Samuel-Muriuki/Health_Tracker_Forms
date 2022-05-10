@@ -15,24 +15,31 @@ import { MoringaComponent } from './Admin-Dashboard/moringa/moringa.component';
 import { AboutComponent } from './about/about.component';
 import { ChatComponent } from './chat-box/chat/chat.component';
 import { ChartComponent } from './charts/chart/chart.component';
+import { MapComponent } from './driver/map/map.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
-  {path: "about", component: AboutComponent},
-  {path: 'moringaStaff/data', component: DisplayFormComponent },
-  {path: 'data/:id', component: DisplayFormComponent },
-  {path: 'add', component: DataFormComponent },
-  {path: 'lab', component: LabDisplayFormsComponent },
-  {path: 'update/:id', component:UpdateFormComponent },
+  {path:"about", component: AboutComponent},
+  {path:"moringaStaff/data", component: DisplayFormComponent },
+  {path:"data/:id", component: DisplayFormComponent },
+  {path:"moringaStaff/data/add", component: DataFormComponent },
+  {path:"lab", component: LabDisplayFormsComponent },
+  {path:"kemriStaff/lab", component: LabDisplayFormsComponent },
+  {path:"update/:id", component:UpdateFormComponent },
   {path:"driver",component:LoginDriverComponent},
   {path:"moringaAdmin",component:LoginMoringaAdminComponent},
   {path:"kemriAdmin",component:LoginKemriAdminComponent},
   {path:"moringaStaff",component:LoginMoringaComponent},
   {path:"kemriStaff",component:LoginKemriComponent},
   {path:"kemriAdmin/kemri",component:KemriComponent},
-  {path:"moringaAdmin/moringa",component:MoringaComponent},
+  {path:"moringaAdmin/data",component:MoringaComponent},
   {path:"chat",component:ChatComponent},
-  {path:"moringaStaff/data/chart",component:ChartComponent},
+  {path:"moringaAdmin/data/chart",component:ChartComponent},
+  {path:"kemriAdmin/lab/chart",component:ChartComponent},
+  {path:"lab/chart",component:ChartComponent},
+  {path:"data", component:MoringaComponent},
+  {path:"kemriAdmin/lab",component:KemriComponent},
+  {path:"driver/map",component:MapComponent},
 ];
 
 @NgModule({

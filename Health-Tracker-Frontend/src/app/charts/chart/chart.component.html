@@ -53,6 +53,18 @@
         <canvas
             baseChart
             [data]="diseaseData"
+            [type]="'polarArea'"
+            [options]="chartOptions"
+        >
+        </canvas>
+        </div>
+    </div>
+    <div class="card mt-2">
+        <div class="card-body">
+        <h4 class="card-title">Line Chart</h4>
+        <canvas
+            baseChart
+            [data]="diseaseData"
             [type]="'line'"
             [options]="chartOptions"
         >
@@ -77,7 +89,7 @@
         <canvas
             baseChart
             [data]="diseaseData"
-            [type]="'doughnut'"
+            [type]="'radar'"
             [options]="chartOptions"
         >
         </canvas>
@@ -89,10 +101,11 @@
         <canvas
             baseChart
             [data]="diseaseData"
-            [type]="'radar'"
+            [type]="'doughnut'"
             [options]="chartOptions"
         >
         </canvas>
         </div>
     </div>
 </div>
+<app-about></app-about>

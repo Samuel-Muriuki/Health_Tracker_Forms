@@ -27,6 +27,7 @@ import { KemriComponent } from './Admin-Dashboard/kemri/kemri.component';
 import { MoringaComponent } from './Admin-Dashboard/moringa/moringa.component';
 import { ChartComponent } from './charts/chart/chart.component';
 import { NgChartsModule } from 'ng2-charts';
+import { MapComponent } from './driver/map/map.component';
 @NgModule({
   declarations: [    
     AppComponent,
@@ -48,7 +49,8 @@ import { NgChartsModule } from 'ng2-charts';
     HomeComponent,
     KemriComponent,
     MoringaComponent,
-    ChartComponent
+    ChartComponent,
+    MapComponent
   ],
   imports: [
     FormsModule,
