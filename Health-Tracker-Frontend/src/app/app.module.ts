@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule} from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing-page/landing/landing.component';
@@ -28,6 +27,10 @@ import { MoringaComponent } from './Admin-Dashboard/moringa/moringa.component';
 import { ChartComponent } from './charts/chart/chart.component';
 import { NgChartsModule } from 'ng2-charts';
 import { MapComponent } from './driver/map/map.component';
+import { MoringaRegisterComponent } from './register/moringa-register/moringa-register.component';
+import { KemriRegisterComponent } from './register/kemri-register/kemri-register.component';
+import { DriverRegisterComponent } from './register/driver-register/driver-register.component';
+import { DriverComponent } from './driver/driver.component';
 @NgModule({
   declarations: [    
     AppComponent,
@@ -50,7 +53,11 @@ import { MapComponent } from './driver/map/map.component';
     KemriComponent,
     MoringaComponent,
     ChartComponent,
-    MapComponent
+    MapComponent,
+    MoringaRegisterComponent,
+    KemriRegisterComponent,
+    DriverRegisterComponent,
+    DriverComponent
   ],
   imports: [
     FormsModule,

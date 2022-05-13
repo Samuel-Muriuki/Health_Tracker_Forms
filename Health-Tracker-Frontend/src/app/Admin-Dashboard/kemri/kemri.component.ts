@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataForm } from 'src/app/models/data-form.model'; 
 import { DataFormService } from 'src/app/services/data-form.service'; 
+import { HttpClient } from '@angular/common/http';
+import { Emitters } from 'src/app/emitters/emitters'; 
 
 @Component({
   selector: 'app-kemri',
@@ -12,9 +14,24 @@ export class KemriComponent implements OnInit {
   currentDataForm: DataForm = {};
   currentIndex = -1;
   id = '';
-  constructor(private dataFormService: DataFormService) { }
+  message = '';
+
+  constructor(
+    private dataFormService: DataFormService,
+    private http: HttpClient
+    ) { }
   
   ngOnInit(): void {
+    this.http.get('http://localhost:4000/api/user/', {withCredentials: true}).subscribe(
+      (res: any) => {
+        this.message = `Welcome ${res.name} to the Kemri Admin Panel`;
+        Emitters.authEmitter.emit(true);
+      },
+      err => {
+        this.message = 'You are not logged in';
+        Emitters.authEmitter.emit(false);
+      }
+    );
     this.retrieveDataForm();
   }
   retrieveDataForm(): void {
